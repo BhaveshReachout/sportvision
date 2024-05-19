@@ -1,0 +1,171 @@
+{% extends 'community/master.html' %}
+{% load static %}
+{% block head %}
+<head xmlns="http://www.w3.org/1999/html">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Communtiy</title>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+  <link rel="stylesheet" href="{% static '/css/style_index_final.css' %}">
+<!--     <link rel="stylesheet" href="{% static 'css/profile_final.css' %}">-->
+<link rel="stylesheet" href="{% static 'css/groups.css' %}">
+</head>
+{% endblock %}
+
+{% block container %}
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio" style="margin:5rem">
+
+            <div class="container"  data-aos="fade-up" >
+<!--              <div class="d-flex justify-content-between">-->
+<!--                <a href="/community/group/create" class="btn btn-sm btn-default float-right">Create Community</a>-->
+<!--              </div>-->
+              <div class="section-title">
+                <h2>Community</h2>
+                <p>Most Popular Community</p>
+              </div>
+      
+         
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-cricket">
+        <div class="portfolio-wrap">
+          <img src="{% static '/img/portfolio/cricket_w.jpg' %}" height="300" class="img-fluid" alt="">
+          <div class="portfolio-links">
+            <a href="{% static '/img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Follow Group"><i class="bi bi-plus"></i></a>
+            <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+          </div>
+          <div class="portfolio-info">
+            <h4>Ahmedabad Women Cricket </h4>
+            <a href="/community/group/details"><p>Cricket</p></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-football">
+        <div class="portfolio-wrap">
+          <img src="{% static '/img/portfolio/football_State.png' %}" class="img-fluid" alt="">
+          <div class="portfolio-links">
+            <a href="{% static './img/portfolio/portfolio-2.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Follow Group"><i class="bi bi-plus"></i></a>
+            <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+          </div>
+          <div class="portfolio-info">
+            <h4>Football ke King</h4>
+            <p>Football</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-cricket">
+        <div class="portfolio-wrap">
+          <img src="{% static '/img/portfolio/cricket_men.jpg' %}" class="img-fluid" alt="">
+          <div class="portfolio-links">
+            <a href="{% static './img/portfolio/portfolio-3.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Follow Group"><i class="bi bi-plus"></i></a>
+            <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+          </div>
+          <div class="portfolio-info">
+            <h4>Gujarat Cric Asso </h4>
+            <p>Cricket</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-football">
+        <div class="portfolio-wrap">
+          <img src="{% static '/img/portfolio/indian-boxing.jpg' %}" class="img-fluid" alt="">
+          <div class="portfolio-links">
+            <a href="{% static './img/portfolio/portfolio-4.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Follow Group"><i class="bi bi-plus"></i></a>
+            <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+          </div>
+          <div class="portfolio-info">
+            <h4>Fighter of India</h4>
+            <p>Boxing</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-kabaddi">
+        <div class="portfolio-wrap">
+          <img src="{% static '/img/portfolio/Swimming_Federation_of_India.jpg' %}" class="img-fluid" alt="">
+          <div class="portfolio-links">
+            <a href="./img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Follow Group"><i class="bi bi-plus"></i></a>
+            <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+          </div>
+          <div class="portfolio-info">
+            <h4>Swimming Federation of India</h4>
+            <p>Swimming</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-cricket">
+        <div class="portfolio-wrap">
+          <img src="{% static '/img/portfolio/archery_association_of_india_archery.jpg' %}" class="img-fluid" alt="">
+          <div class="portfolio-links">
+            <a href="./img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Follow Group"><i class="bi bi-plus"></i></a>
+            <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+          </div>
+          <div class="portfolio-info">
+            <h4>archery_association_of_india_archery</h4>
+            <p>Archery</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-kabaddi">
+        <div class="portfolio-wrap">
+          <img src="{% static '/img/portfolio/archery_association_of_india_archery.jpg' %}" class="img-fluid" alt="">
+          <div class="portfolio-links">
+            <a href="./img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Follow Group"><i class="bi bi-plus"></i></a>
+            <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+          </div>
+          <div class="portfolio-info">
+            <h4>archery_association_of_Gujarat_archery</h4>
+            <p>Archery</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-kabaddi">
+        <div class="portfolio-wrap">
+          <img src="{% static '/img/portfolio/swimming.jpg' %}" class="img-fluid" alt="">
+          <div class="portfolio-links">
+            <a href="./img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Follow Group"><i class="bi bi-plus"></i></a>
+            <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+          </div>
+          <div class="portfolio-info">
+          <h4>Swimming Federation of Gujarat</h4>
+            <p>Swimming</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-football">
+        <div class="portfolio-wrap">
+          <img src="{% static '/img/portfolio/indian-boxing.jpg' %}" class="img-fluid" alt="">
+          <div class="portfolio-links">
+            <a href="./img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Follow Group  "><i class="bi bi-plus"></i></a>
+            <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+          </div>
+          <div class="portfolio-info">
+           <h4>Fighter of Rastra</h4>
+            <p>Boxing</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+      
+            </div>
+          </section><!-- End Portfolio Section -->
+      
+    
+</body>
+
+{% endblock %}

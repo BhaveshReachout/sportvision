@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+{% block head %}
+
+{% endblock %}
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <div class="logo">
+      <h1 class="text-light"><a href="/community/index"><span>SportVision</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    </div>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="/community/index">Home</a></li>
+        <li class="dropdown"><a href="/community/index"><span>Community</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="/community/activity">Activity</a></li>
+            <li><a href="/community/member">Members</a></li>
+            <li><a href="/community/group">Community</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link scrollto" href="/community/about">About Us</a></li>
+<!--        <li><a class="nav-link scrollto" href="/community/activity">Activity</a></li>-->
+
+        <li><a class="nav-link scrollto" href="/community/contact">Contact</a></li>
+        {% if user.is_authenticated %}
+
+
+        <li><a class="getstarted signUp scrollto" href="/community/activity">Activity</a></li>
+        <li><a class="getstarted signUp scrollto" href="/community/post/">MyPost</a></li>
+        <li><a class="getstarted signUp scrollto" href="/community/post/create">CreatePost</a></li>
+        <li><a class="getstarted signUp scrollto" href="/community/group/create">CreateCommunity</a></li>
+         <li><a class="getstarted signUp scrollto" href="/community/profile/">Profile</a></li>
+        <li><a class="getstarted signUp scrollto" href="/community/logout">Logout</a></li>
+        {% else %}
+        <li><a class="getstarted signUp scrollto" href="/community/login">Log In</a></li>
+        <li><a class="getstarted logIn scrollto" href="/community/signup">Sign Up</a></li>
+        {% endif %}
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->
+
+{% block container %}
+{% endblock %}
+
+
+ <!-- ======= Footer ======= -->
+  <footer id="footer" style="padding-top: 5rem;">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>SportsVision</h3>
+            <p>
+              Ahmedabad, Gujarat, India <br><br>
+              <strong>Phone:</strong> +91 95452 45150<br>
+              <strong>Email:</strong> info@sportvision.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/community/index">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/community/about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/community/communities">Community</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Community</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/community/activity">Activity</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/community/activity">Members</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/community/activity"></a></li>
+              <li ><i class="bx bx-chevron-right"></i> <a href="#" class="disabled">Audio Room's(Upcoming soon)</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Join Us on Our Social Networks for Latest Updates !</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>SportsVision</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="{% static '/js/app.js' %}"></script>
+
+</html>

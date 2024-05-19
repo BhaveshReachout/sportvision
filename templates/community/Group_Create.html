@@ -1,0 +1,107 @@
+{% extends 'community/master.html' %}
+{% load static %}
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/style_index_final.css' %}">
+    <link rel="stylesheet" href="{% static '/css/profile_final.css' %}">
+    <style>
+
+        .my-class{
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: center;
+        }
+
+        .my-btns{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+       .edit-profilee{
+           display: flex;
+           justify-content: center;
+       }
+       .edit-profilee img{
+             max-width: 300px !important;
+            max-height: 300px !important;
+            width: 300px !important;
+            height: 300px !important;
+            border-radius: 0 !important;
+            position: relative !important;
+            object-fit: cover;
+       }
+   </style>
+</head>
+{% endblock %}
+
+{% block container %}
+<body>
+<div class="main-content edit-content">
+    <div class="col-xl-8 order-xl-1">
+        <div class="card bg-secondary shadow">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="card-header bg-white border-0">
+                    <div class="my-class">
+                        <div class="my-btns">
+                            <div class="">
+                                <a href="/community/index" class="btn btn-sm btn-primary">Cancel</a>
+                            </div>
+                            <div class="">
+                                <tr>
+                                    <th><label for="id_pic"></label></th>
+                                    <td><input type="file" name="pic" accept="image/*" id="id_pic"></td>
+                                </tr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <hr class="my-4">
+                    <!-- Description -->
+                    <h6 class="heading-small text-muted mb-4 pl-lg-4">Description</h6>
+                    <div class="pl-lg-4">
+                        <div class="form-group focused">
+                            <label>Community Name</label>
+                            <tr>
+                                <th><label for="id_c_name"></label></th>
+                                <td><input type="text" name="c_name"  maxlength="25" required id="id_c_name"></td>
+                            </tr>
+                        </div>
+                        <div class="form-group focused">
+                            <label>Community Description</label>
+                            <tr>
+                                <th><label for="id_desc"></label></th>
+                                <td><input type="text" name="desc" cols="40" rows="4" maxlength="500" required id="id_desc" ></td>
+                            </tr>
+                        </div>
+                        <div class="form-group focused">
+                            <label>Visiblity</label>
+                            <tr>
+                               <th> <label for="id_visiblity"></label></th>
+                                <td> <select name="visiblity" required id="id_visiblity">
+                            <option value="">---------</option>
+                            <option value="private" selected>private</option>
+                            <option value="public">public</option>
+                            </select></td>
+                            </tr>
+                        </div>
+                        <div class="col-12 text-center">
+                            <input type="submit" name="submit" value="Create" class="btn btn-sm btn-info mr-8">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</body>
+{% endblock %}

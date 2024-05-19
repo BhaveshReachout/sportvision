@@ -1,0 +1,58 @@
+{% extends 'community/master.html' %}
+{% load static %}
+
+{% block head %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Communtiy</title>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{% static '/css/style_index_final.css' %}">
+<link rel="stylesheet" href="{% static 'css/activity.css' %}">
+</head>
+{% endblock %}
+
+{% block container %}
+<body style="margin:5rem" data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<div class="site-wrap">
+    <div class="site-section">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="col-12">
+                <input type="submit" value="Create Post" class="btn btn-primary btn-lg px-5">
+            </div>
+        </form>
+    </div>
+
+
+    <div class="section-bg style-1" style="background-image: url('images/hero_1.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <span class="icon flaticon-mortarboard"></span>
+                    <h3>Our Philosphy</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea? Dolore, amet reprehenderit.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <span class="icon flaticon-school-material"></span>
+                    <h3>Academics Principle</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea?
+                        Dolore, amet reprehenderit.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <span class="icon flaticon-library"></span>
+                    <h3>Key of Success</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea?
+                        Dolore, amet reprehenderit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}

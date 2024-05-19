@@ -1,0 +1,28 @@
+{% extends 'community/master.html' %}
+{% load static %}
+
+{% block head %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Communtiy</title>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{% static '/css/style_index_final.css' %}">
+</head>
+{% endblock %}
+
+{% block container %}
+<div class="container" style="margin:5rem">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 >About Us</h1>
+            <p>It is an online platform where a person can create one or more communities in a particular way and they can also follow any community / group if they wish. So basically the purpose of creating this community is for friends, acquaintances, or people with similar interests to discuss or share on broad or narrow topics and also spread motivation between same interested people.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
